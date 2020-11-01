@@ -1,0 +1,12 @@
+version: "3"
+service:
+  postgres:
+  image: "postgres: latest"
+  ports:
+    - “5432:5432” 
+    volumes:
+        - /var/lib/postgres
+    environment:
+        POSTGRES_DB: project
+        POSTGRES_USER: project
+        POSTGRES_PASSWORD: project

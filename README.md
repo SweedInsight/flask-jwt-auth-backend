@@ -7,7 +7,10 @@
 ### Basics
 
 1. Activate a virtualenv
+    python -m venv env
+    source env/Scripts/activate
 1. Install the requirements
+    pip install -r requirements.txt
 
 ### Set Environment Variables
 
@@ -69,3 +72,14 @@ With coverage:
 ```sh
 $ python manage.py cov
 ```
+
+
+### Generate random server-side accesible Key:
+The secret key must be random and only accessible server-side. Use the Python interpreter to generate a key:
+
+>>> import os
+>>> os.urandom(24)
+
+Set the key as an environment variable:
+
+(env)$ export SECRET_KEY="\xf9'\x
